@@ -88,7 +88,7 @@ Verifique o arquivo ```CanPurchase``` da classe ```CustomerService``` e note que
 Seu trabalho aqui será:
 1. Crie testes unitários para este método. Tente obter o máximo de cobertura possível. Se precisar, pode rearquitetar o código para facilitar nos testes.
 
-Você pode utilizar qualquer framework de testes que desejar. Coloque os testes na pasta ```Tests``` da solution.
+Você pode utilizar qualquer framework de testes que desejar. 
 
 ## Como entregar
 Oba! Terminou tudinho? Agora faça o seguinte:
