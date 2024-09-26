@@ -28,6 +28,8 @@ git clone https://github.com/SEUSUARIO/prova-bonifiq.git
 
 > Lembre-se: NÃO gere um Fork do repositório. Siga os passos acima para copiar o repositório para sua conta.
 
+> Importante: O código deve estar na branch main/master do seu repositório
+
 ## Conhecendo o projeto
 > Nós recomendamos que você utilize o Visual Studio 2022 (pode ser a versão community). Você também precisa do .NET 6 instalado, ok?
 Ah, não esquece de instalar o pacote de desenvolvimento para o ASP NET durante a instalação do Visual Studio.
@@ -89,6 +91,10 @@ Seu trabalho aqui será:
 1. Crie testes unitários para este método. Tente obter o máximo de cobertura possível. Se precisar, pode rearquitetar o código para facilitar nos testes.
 
 Você pode utilizar qualquer framework de testes que desejar. 
+
+### Dicas
+- Você pode alterar qualquer parte do código ou de sua arquitetura como julgar melhor.
+- Valorizamos arquitetura e aplicação correta de Design Patterns (fica à vontade para “over engineering” na sua demonstração);
 
 ## Como entregar
 Oba! Terminou tudinho? Agora faça o seguinte:
