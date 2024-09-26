@@ -64,6 +64,8 @@ Você pode vê-lo funcionando ao rodar o projeto e na página do Swagger, clique
 Esse código, no entanto, tem algum problema: ele sempre retorna o mesmo valor.
 Seu trabalho, portanto, é corrigir esse comportamente: cada vez que a chamada é realizada um número diferente deverá ser retornado.
 
+Outro problema a ser corrigido: o número salvo no banco deve ser único. Muitas vezes uma exception é gerada quando se tenta salvar o mesmo número mais de uma vez. Faça também a correção desse problema.
+
 ### Parte2Controller
 Essa API deveria retornar os produtos cadastrados de forma paginada. O usuário informa a página (page) desejada e o sistema retorna os 10 itens da mesma.
 O problema é que não importa qual número de página é utilizado: os resultados estão vindo sempre os mesmos. E não apenas os 10.
@@ -82,6 +84,7 @@ Essa classe, no entanto, é problemática. Imagine que teríamos que incluir um 
 Você precisa:
 1. Faça uma alteração na arquitetura para que fique mais bem estruturado e preparado para o futuro.
 Tenha certeza que o princípio Open-Closed será respeitado.
+2. O retorno do método é um objeto `Order`, que possui um campo `OrderDate`. Tenha certeza que ao salvar o pedido no banco o campo `OrderDate` é salvo como UTC. Entretanto, o retorno do Controller deve exibir o `OrderDate` em fuso horário brasileiro (UTC-3)
 
 ### Parte4Controller
 Essa API faz uma validação de negócio e retorna se o consumidor pode realizar uma compra.

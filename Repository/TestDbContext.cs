@@ -19,6 +19,8 @@ namespace ProvaPub.Repository
 
 			modelBuilder.Entity<Customer>().HasData(getCustomerSeed());
 			modelBuilder.Entity<Product>().HasData(getProductSeed());
+
+			modelBuilder.Entity<RandomNumber>().HasIndex(s => s.Number).IsUnique();
 		}
 
 		private Customer[] getCustomerSeed()
@@ -51,5 +53,8 @@ namespace ProvaPub.Repository
 		public DbSet<Customer> Customers{ get; set; }
 		public DbSet<Product> Products{ get; set; }
 		public DbSet<Order> Orders { get; set; }
-	}
+
+        public DbSet<RandomNumber> Numbers { get; set; }
+
+    }
 }
