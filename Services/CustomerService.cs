@@ -39,6 +39,11 @@ namespace ProvaPub.Services
             if (haveBoughtBefore == 0 && purchaseValue > 100)
                 return false;
 
+            //Business Rule: A customer can purchases only during business hours and working days
+            if (DateTime.UtcNow.Hour < 8 || DateTime.UtcNow.Hour > 18 || DateTime.UtcNow.DayOfWeek == DayOfWeek.Saturday || DateTime.UtcNow.DayOfWeek == DayOfWeek.Sunday)
+                return false;
+
+
             return true;
         }
 
